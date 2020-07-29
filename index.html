@@ -1,127 +1,257 @@
-<!DOCTYPE html><html lang="zh-TW" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Philosophy's Blog</title><meta name="description" content="Wild and unfettered and free....."><meta name="author" content="Philosophy"><meta name="copyright" content="Philosophy"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="https://ftp.bmp.ovh/imgs/2020/07/2a00b0e3d5f9c023.png"><link rel="canonical" href="http://yoursite.com/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><meta property="og:type" content="website"><meta property="og:title" content="Philosophy's Blog"><meta property="og:url" content="http://yoursite.com/"><meta property="og:site_name" content="Philosophy's Blog"><meta property="og:description" content="Wild and unfettered and free....."><meta property="og:image" content="https://ftp.bmp.ovh/imgs/2020/07/4e942955e0e28ec4.jpg"><meta property="article:published_time" content="2020-07-29T07:13:26.185Z"><meta property="article:modified_time" content="2020-07-29T07:13:26.185Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
-  document.documentElement.setAttribute('data-theme', 'dark')
-  if (document.querySelector('meta[name="theme-color"]') !== null) {
-    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
-  }
-}
-var activateLightMode = function () {
-  document.documentElement.setAttribute('data-theme', 'light')
-  if (document.querySelector('meta[name="theme-color"]') !== null) {
-    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
-  }
-}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
 
-var getCookies = function (name) {
-  const value = `; ${document.cookie}`
-  const parts = value.split(`; ${name}=`)
-  if (parts.length === 2) return parts.pop().split(';').shift()
-}
+  
+  <title>Philosophy&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Wild and unfettered and free.....">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Philosophy&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Philosophy&#39;s Blog">
+<meta property="og:description" content="Wild and unfettered and free.....">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:author" content="Philosophy">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Philosophy&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
-var autoChangeMode = 'false'
-var t = getCookies('theme')
-if (autoChangeMode === '1') {
-  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
-  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
-  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+<meta name="generator" content="Hexo 4.2.1"></head>
 
-  if (t === undefined) {
-    if (isLightMode) activateLightMode()
-    else if (isDarkMode) activateDarkMode()
-    else if (isNotSpecified || hasNoSupport) {
-      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
-      var now = new Date()
-      var hour = now.getHours()
-      var isNight = hour <= 6 || hour >= 18
-      isNight ? activateDarkMode() : activateLightMode()
-    }
-    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
-      if (Cookies.get('theme') === undefined) {
-        e.matches ? activateDarkMode() : activateLightMode()
-      }
-    })
-  } else if (t === 'light') activateLightMode()
-  else activateDarkMode()
-} else if (autoChangeMode === '2') {
-  now = new Date()
-  hour = now.getHours()
-  isNight = hour <= 6 || hour >= 18
-  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
-  else if (t === 'light') activateLightMode()
-  else activateDarkMode()
-} else {
-  if (t === 'dark') activateDarkMode()
-  else if (t === 'light') activateLightMode()
-}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查詢的內容:${query}"}},
-  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
-  copy: {
-    success: '複製成功',
-    error: '複製錯誤',
-    noSupport: '瀏覽器不支援'
-  },
-  bookmark: {
-    message_prev: '按',
-    message_next: '鍵將本頁加入書籤'
-  },
-  runtime_unit: '天',
-  runtime: false,
-  copyright: {"languages":{"author":"作者: Philosophy","link":"連結: ","source":"來源: Philosophy's Blog","info":"著作權歸作者所有。商業轉載請聯絡作者獲得授權，非商業轉載請註明出處。"}},
-  ClickShowText: undefined,
-  medium_zoom: false,
-  fancybox: true,
-  Snackbar: {"bookmark":{"message_prev":"按","message_next":"鍵將本頁加入書籤"},"chs_to_cht":"你已切換為繁體","cht_to_chs":"你已切換為簡體","day_to_night":"你已切換為深色模式","night_to_day":"你已切換為淺色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
-  justifiedGallery: {
-    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
-    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
-  },
-  baiduPush: true,
-  highlightCopy: true,
-  highlightLang: true,
-  isPhotoFigcaption: true,
-  islazyload: true,
-  isanchor: true    
-}</script><script>var GLOBAL_CONFIG_SITE = { 
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isSidebar: false
-  }</script><noscript><style>
-#nav {
-  opacity: 1
-}
-.justified-gallery img{
-  opacity: 1
-}
-</style></noscript><meta name="generator" content="Hexo 4.2.1"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">載入中...</div></div></div><canvas class="fireworks"></canvas><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://ftp.bmp.ovh/imgs/2020/07/4e942955e0e28ec4.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">2</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">標籤</div><div class="length_num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/index.html"><i class="fa-fw fas fa-home"></i><span> 主頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 歸檔</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標簽</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="https://space.bilibili.com/402520142" target="_blank" rel="noopener"><i class="fa-fw https://ftp.bmp.ovh/imgs/2020/07/67b387482098daff.png"></i><span> 嗶哩</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> Books</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友鏈</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 關於</span></a></div></div></div></div><div id="body-wrap"><div id="web_bg" data-type="color"></div><header class="full_page" id="page-header" style="background-image: url(https://ftp.bmp.ovh/imgs/2019/12/c09c53ac17152c07.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Philosophy's Blog</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜尋</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/index.html"><i class="fa-fw fas fa-home"></i><span> 主頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 歸檔</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標簽</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="https://space.bilibili.com/402520142" target="_blank" rel="noopener"><i class="fa-fw https://ftp.bmp.ovh/imgs/2020/07/67b387482098daff.png"></i><span> 嗶哩</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> Books</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友鏈</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 關於</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">Philosophy's Blog</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/xeonpoint" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:wujinxi20070329@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/07/28/C++%E9%9B%9C%E8%AB%87/" title="C++ 雜談">     <img class="post_bg" data-src="https://ftp.bmp.ovh/imgs/2020/07/90e8bb4243a1cf97.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++ 雜談"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/28/C++%E9%9B%9C%E8%AB%87/" title="C++ 雜談">C++ 雜談</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack article-meta__icon sticky"></i><span class="sticky">置頂</span><span class="article-meta__separator">|</span></span><time class="post-meta__date"><span class="post-meta__date-created" title="發表於 2020-07-28 15:16:55"><i class="far fa-calendar-alt"></i>2020-07-28</span><span class="article-meta__separator">|</span><span class="post-meta__date-updated" title="更新於 2020-07-28 20:57:23"><i class="fas fa-history"></i>2020-07-28</span></time></div><div class="content">大標題（？）起因：好吧，其實寫這篇文章主要就是爲了測試一下我當初看到有幾個國中生用vbs做一個自動關機的脚本説是爲了用來整蠱我忍為他們是爲了裝X 就突發奇想用c++來做一個
-實現：然後，我就立馬想到了:
-1shutdown -s
-然後用system函數？把它用在cpp控制臺還是説終端?裏就成了system(&quot;shutdown -s&quot;)
-大標題 2代碼：完整的程序實現：
-12345678#pragma once#include &lt;iostream&gt;using namespace std;int main()&#123;    system("shutdown -s");    return 0;&#125;
-總結？好，就這樣。我沒有寫注釋。
-是不是太短了？我也覺得但是，事實上，我真的沒什麽好寫的….哎。算了，再來隨便水一點吧。
-水雖然下文足以寫一篇新的文章了，但是爲了測試一下目錄，我還真是決定要這樣。
-查看Windows系統信息不要問我亂碼是什麽，這是我隨便找來的visual studio中文編碼有大問題。
-123456789101112131415161 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/07/27/%E8%AA%AC%E6%98%8E/" title="説明">     <img class="post_bg" data-src="https://ftp.bmp.ovh/imgs/2020/07/90e8bb4243a1cf97.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="説明"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/27/%E8%AA%AC%E6%98%8E/" title="説明">説明</a><div class="article-meta-wrap"><time class="post-meta__date"><span class="post-meta__date-created" title="發表於 2020-07-27 16:51:26"><i class="far fa-calendar-alt"></i>2020-07-27</span><span class="article-meta__separator">|</span><span class="post-meta__date-updated" title="更新於 2020-07-27 16:52:43"><i class="fas fa-history"></i>2020-07-27</span></time></div><div class="content">如果在一個blog中設置了密碼，則該密碼一定是[helloworld]
-</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://ftp.bmp.ovh/imgs/2020/07/4e942955e0e28ec4.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Philosophy</div><div class="author-info__description">Wild and unfettered and free.....</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">2</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">標籤</div><div class="length_num">2</div></a></div></div><div class="card-info-bookmark is-center"><button class="button--animated" id="bookmark-it" title="加入書籤"><i class="fas fa-bookmark"></i><span>加入書籤</span></button></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xeonpoint" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:wujinxi20070329@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">歡迎評論 交換友鏈！</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a href="/2020/07/28/C++%E9%9B%9C%E8%AB%87/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://ftp.bmp.ovh/imgs/2020/07/90e8bb4243a1cf97.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="C++ 雜談" alt="C++ 雜談"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/07/28/C++%E9%9B%9C%E8%AB%87/" title="C++ 雜談">C++ 雜談</div><time class="aside-post_meta post-meta__date" title="發表於 2020-07-28 15:16:55">2020-07-28</time></div></a></div><div class="aside-recent-post"><a href="/2020/07/27/%E8%AA%AC%E6%98%8E/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://ftp.bmp.ovh/imgs/2020/07/90e8bb4243a1cf97.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="説明" alt="説明"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/07/27/%E8%AA%AC%E6%98%8E/" title="説明">説明</div><time class="aside-post_meta post-meta__date" title="發表於 2020-07-27 16:51:26">2020-07-27</time></div></a></div></div></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>標籤</span></div><div class="card-tag-cloud"><a href="/tags/cpp/" style="font-size: 16px; color: #999">cpp</a> <a href="/tags/%E6%8A%80%E8%A1%93/" style="font-size: 16px; color: #999">技術</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>歸檔</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/07/"><span class="card-archive-list-date">七月 2020</span><span class="card-archive-list-count">2</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>網站資訊</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章數目 :</div><div class="webinfo-article-count">2</div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站訪客數 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站總訪問量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://ftp.bmp.ovh/imgs/2019/12/c09c53ac17152c07.jpg)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2020  Philosophy</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button class="translate_chn_to_cht" id="translateLink" title="簡繁轉換">繁</button><button id="darkmode" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="設定"><i class="fas fa-cog"></i></button><button id="go-up" title="回到頂部"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜尋</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜尋文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script defer id="ribbon" src="/js/third-party/canvas-ribbon.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
-POWERMODE.shake = true;
-document.body.addEventListener('input', POWERMODE);
-</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/search/local-search.js"></script><script src="https://cdn.jsdelivr.net/npm/typed.js"></script><script>var subtitleEffect = true
-if (subtitleEffect) { 
-  var typed = new Typed("#subtitle", {
-    strings: "如無必要，勿增實體,Never put off till tomorrow what you can do today".split(","),
-    startDelay: 300,
-    typeSpeed: 150,
-    loop: true,
-    backSpeed: 50
-  })
-} else {
-  document.getElementById("subtitle").innerHTML = '如無必要，勿增實體'
-}</script><script src="https://cdn.jsdelivr.net/gh/xiabo2/CDN@latest/fishes.js"></script><script>var endLoading = function () {
-  document.body.style.overflow = 'auto';
-  document.getElementById('loading-box').classList.add("loaded")
-}
-window.addEventListener('load',endLoading)</script></body></html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Philosophy&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜尋"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-C++雜談" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/28/C++%E9%9B%9C%E8%AB%87/" class="article-date">
+  <time datetime="2020-07-28T07:16:55.000Z" itemprop="datePublished">2020-07-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/28/C++%E9%9B%9C%E8%AB%87/">C++ 雜談</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="大標題（？）"><a href="#大標題（？）" class="headerlink" title="大標題（？）"></a>大標題（？）</h1><h2 id="起因："><a href="#起因：" class="headerlink" title="起因："></a>起因：</h2><p><del>好吧，其實寫這篇文章主要就是爲了測試一下</del><br>我當初看到有幾個國中生用vbs做一個自動關機的脚本説是爲了用來整蠱<br><del>我忍為他們是爲了裝X</del> 就突發奇想用c++來做一個</p>
+<h2 id="實現："><a href="#實現：" class="headerlink" title="實現："></a>實現：</h2><p>然後，我就立馬想到了:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shutdown -s</span><br></pre></td></tr></table></figure>
+<p>然後用<code>system</code><del>函數？</del>把它用在cpp控制臺<del>還是説終端?</del>裏<br>就成了<code>system(&quot;shutdown -s&quot;)</code></p>
+<h1 id="大標題-2"><a href="#大標題-2" class="headerlink" title="大標題 2"></a>大標題 2</h1><h2 id="代碼："><a href="#代碼：" class="headerlink" title="代碼："></a>代碼：</h2><p>完整的程序實現：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> once</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    system(<span class="string">"shutdown -s"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="總結？"><a href="#總結？" class="headerlink" title="總結？"></a>總結？</h3><p>好，就這樣。我沒有寫注釋。</p>
+<p>是不是太短了？<del>我也覺得</del><br>但是，事實上，我真的沒什麽好寫的….<br>哎。算了，再來隨便水一點吧。</p>
+<h3 id="水"><a href="#水" class="headerlink" title="水"></a>水</h3><p>雖然下文足以寫一篇新的文章了，但是爲了測試一下目錄，我還真是決定要這樣。</p>
+<h1 id="查看Windows系統信息"><a href="#查看Windows系統信息" class="headerlink" title="查看Windows系統信息"></a>查看Windows系統信息</h1><p><del>不要問我亂碼是什麽，這是我隨便找來的</del><br><del>visual studio中文編碼有大問題。</del></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//��ȡϵͳ�汾��</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SYSTEM_VERSION_UNKNOW _T(<span class="meta-string">"δ֪�Ĳ���ϵͳ"</span>)</span></span><br><span class="line"><span class="function">BOOL <span class="title">GetSystemVersion</span><span class="params">(LPWSTR version, DWORD lenth)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	BOOL Wow64;</span><br><span class="line">	SYSTEM_INFO info;</span><br><span class="line">	<span class="comment">//�ж��Ƿ�����64λϵͳģ���������</span></span><br><span class="line">	<span class="keyword">if</span> (!IsWow64Process(GetCurrentProcess(), &amp;Wow64))</span><br><span class="line">		<span class="keyword">return</span> FALSE;</span><br><span class="line">	<span class="comment">//��ȡCPU��Ϣ</span></span><br><span class="line">	<span class="keyword">if</span> (Wow64)</span><br><span class="line">		GetNativeSystemInfo(&amp;info);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		GetSystemInfo(&amp;info);</span><br><span class="line">	<span class="comment">//�������</span></span><br><span class="line">	<span class="function"><span class="keyword">typedef</span> <span class="title">LONG</span><span class="params">(__stdcall *fnRtlGetVersion)</span><span class="params">(PRTL_OSVERSIONINFOW lpVersionInformation)</span></span>;</span><br><span class="line">	fnRtlGetVersion pRtlGetVersion;</span><br><span class="line">	HMODULE hNtdll;</span><br><span class="line">	LONG ntStatus;</span><br><span class="line">	RTL_OSVERSIONINFOEXW os;</span><br><span class="line">	<span class="comment">//��ȡ����</span></span><br><span class="line">	hNtdll = GetModuleHandle(_T(<span class="string">"ntdll.dll"</span>));</span><br><span class="line">	<span class="keyword">if</span> (hNtdll == <span class="literal">NULL</span>)</span><br><span class="line">		<span class="keyword">return</span> FALSE;</span><br><span class="line">	pRtlGetVersion = (fnRtlGetVersion)GetProcAddress(hNtdll, <span class="string">"RtlGetVersion"</span>);</span><br><span class="line">	<span class="keyword">if</span> (pRtlGetVersion == <span class="literal">NULL</span>)</span><br><span class="line">		<span class="keyword">return</span> FALSE;</span><br><span class="line">	<span class="comment">//��ȡϵͳ�����Ϣ</span></span><br><span class="line">	os.dwOSVersionInfoSize = <span class="keyword">sizeof</span>(RTL_OSVERSIONINFOEXW);</span><br><span class="line">	ntStatus = pRtlGetVersion((PRTL_OSVERSIONINFOW)&amp;os);</span><br><span class="line">	<span class="keyword">if</span> (ntStatus != <span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span> FALSE;</span><br><span class="line">	<span class="comment">//�ж���ʲôϵͳ</span></span><br><span class="line">	<span class="keyword">switch</span> (os.dwMajorVersion)&#123;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">switch</span> (os.dwMinorVersion) &#123; <span class="comment">//Minor</span></span><br><span class="line">		<span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">		        &#123;</span><br><span class="line">			        <span class="keyword">if</span> (os.dwPlatformId == VER_PLATFORM_WIN32_NT)</span><br><span class="line">						wcscpy_s(version, lenth, _T(<span class="string">"Microsoft Windows NT 4.0"</span>));</span><br><span class="line">					<span class="keyword">else</span> <span class="keyword">if</span> (os.dwPlatformId == VER_PLATFORM_WIN32_WINDOWS)</span><br><span class="line">						wcscpy_s(version, lenth, _T(<span class="string">"Microsoft Windows 95"</span>));</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">			    &#125;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">10</span>:</span><br><span class="line">		       &#123;</span><br><span class="line">			        wcscpy_s(version, lenth, _T(<span class="string">"Microsoft Windows 98"</span>));</span><br><span class="line">			        <span class="keyword">break</span>;</span><br><span class="line">	           	&#125;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">90</span>:</span><br><span class="line">		        &#123;</span><br><span class="line">			        wcscpy_s(version, lenth, _T(<span class="string">"Microsoft Windows Me"</span>));</span><br><span class="line">			        <span class="keyword">break</span>;</span><br><span class="line">		         &#125;</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">		        &#123;</span><br><span class="line">			        wcscpy_s(version, lenth, SYSTEM_VERSION_UNKNOW);</span><br><span class="line">			        <span class="keyword">break</span>;</span><br><span class="line">	  	         &#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">switch</span> (os.dwMinorVersion) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">		    &#123; </span><br><span class="line">			    wcscpy_s(version, lenth, _T(<span class="string">"Microsoft Windows 2000"</span>));</span><br><span class="line">			    <span class="keyword">break</span>;</span><br><span class="line">		    &#125;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">		   &#123; </span><br><span class="line">			   wcscpy_s(version, lenth, _T(<span class="string">"Microsoft Windows XP"</span>));</span><br><span class="line">			   <span class="keyword">break</span>;</span><br><span class="line">		   &#125;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (os.wProductType == VER_NT_WORKSTATION &amp;&amp;</span><br><span class="line">				info.wProcessorArchitecture == PROCESSOR_ARCHITECTURE_AMD64)</span><br><span class="line">				wcscpy_s(version, lenth, _T(<span class="string">"Microsoft Windows XP Professional x64 Edition"</span>));</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (os.wSuiteMask == VER_SUITE_WH_SERVER)</span><br><span class="line">				wcscpy_s(version, lenth, _T(<span class="string">"Microsoft Windows Home Server"</span>));</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (GetSystemMetrics(SM_SERVERR2) == <span class="number">0</span>)</span><br><span class="line">				wcscpy_s(version, lenth, _T(<span class="string">"Microsoft Windows Server 2003"</span>));</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (GetSystemMetrics(SM_SERVERR2) != <span class="number">0</span>)</span><br><span class="line">				wcscpy_s(version, lenth, _T(<span class="string">"Microsoft Windows Server 2003 R2"</span>));</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">		&#123;</span><br><span class="line">			wcscpy_s(version, lenth, SYSTEM_VERSION_UNKNOW);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	  &#125;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">6</span>:</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">switch</span> (os.dwMinorVersion) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (os.wProductType == VER_NT_WORKSTATION)</span><br><span class="line">				wcscpy_s(version, lenth, _T(<span class="string">"Microsoft Windows Vista"</span>));</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				wcscpy_s(version, lenth, _T(<span class="string">"Microsoft Windows Server 2008"</span>));</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (os.wProductType == VER_NT_WORKSTATION)</span><br><span class="line">				wcscpy_s(version, lenth, _T(<span class="string">"Microsoft Windows 7"</span>));</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				wcscpy_s(version, lenth, _T(<span class="string">"Microsoft Windows Server 2008 R2"</span>));</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (os.wProductType == VER_NT_WORKSTATION)</span><br><span class="line">				wcscpy_s(version, lenth, _T(<span class="string">"Microsoft Windows 8"</span>));</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				wcscpy_s(version, lenth, _T(<span class="string">"Microsoft Windows Server 2012"</span>));</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">		    &#123;</span><br><span class="line">			   <span class="keyword">if</span> (os.wProductType == VER_NT_WORKSTATION)</span><br><span class="line">				  wcscpy_s(version, lenth, _T(<span class="string">"Microsoft Windows 8.1"</span>));</span><br><span class="line">			   <span class="keyword">else</span></span><br><span class="line">			   	  wcscpy_s(version, lenth, _T(<span class="string">"Microsoft Windows Server 2012 R2"</span>));</span><br><span class="line">			   <span class="keyword">break</span>;</span><br><span class="line">		    &#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">10</span>:</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (os.dwMinorVersion == <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (os.wProductType == VER_NT_WORKSTATION)</span><br><span class="line">				wcscpy_s(version, lenth, _T(<span class="string">"Microsoft Windows 10"</span>));</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				wcscpy_s(version, lenth, _T(<span class="string">"Microsoft Windows Server 2016"</span>));</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			wcscpy_s(version, lenth, SYSTEM_VERSION_UNKNOW);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">default</span>:</span><br><span class="line">	&#123;</span><br><span class="line">		wcscpy_s(version, lenth, SYSTEM_VERSION_UNKNOW);</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">  &#125;</span><br><span class="line">	<span class="keyword">if</span> ((wcscmp(version, SYSTEM_VERSION_UNKNOW) != <span class="number">0</span>))</span><br><span class="line">	&#123;		</span><br><span class="line">		<span class="keyword">if</span>(os.dwBuildNumber != <span class="number">0</span>)</span><br><span class="line">		   wsprintf(version, _T(<span class="string">"%s.%u"</span>), version, os.dwBuildNumber);</span><br><span class="line">	</span><br><span class="line">		<span class="keyword">if</span> (info.wProcessorArchitecture == PROCESSOR_ARCHITECTURE_AMD64 || info.wProcessorArchitecture == PROCESSOR_ARCHITECTURE_IA64)</span><br><span class="line">			wcscat_s(version, lenth, _T(<span class="string">" 64λ&lt;����x64�Ĵ�����&gt;"</span>));</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			wcscat_s(version, lenth, _T(<span class="string">" 32λ&lt;����x86�Ĵ�����&gt;"</span>));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> TRUE;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="c-打飛機"><a href="#c-打飛機" class="headerlink" title="c++ 打飛機"></a>c++ 打飛機</h1><h2 id="水-1"><a href="#水-1" class="headerlink" title="水"></a>水</h2><p>關於亂碼，不要問我爲何。同上。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;conio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX 100</span></span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> speed = <span class="number">22</span>;<span class="comment">//���Ƶл����ٶ� </span></span><br><span class="line"><span class="keyword">int</span> position_x, position_y;<span class="comment">//�ɻ�������λ�� </span></span><br><span class="line"><span class="keyword">int</span> high, <span class="built_in">width</span>;<span class="comment">//��ͼ�Ĵ�С </span></span><br><span class="line"><span class="keyword">int</span> bullet_x, bullet_y;<span class="comment">//�ӵ���λ�� </span></span><br><span class="line"><span class="keyword">int</span> enemy_x, enemy_y;<span class="comment">//���˵�λ�� </span></span><br><span class="line"><span class="keyword">int</span> <span class="built_in">map</span>[MAX][MAX];</span><br><span class="line"><span class="comment">/*0��ʾ�հף�1��ʾս��*������2��ʾ����ս����λ�á�</span></span><br><span class="line"><span class="comment">3��ʾ����Χǽ��4��ʾ����Χǽ,5��ʾ�ӵ���λ��*/</span></span><br><span class="line"><span class="keyword">int</span> score;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">starup</span><span class="params">()</span><span class="comment">//��ʼ�����е���Ϣ </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    high = <span class="number">20</span>;</span><br><span class="line">    <span class="built_in">width</span> = <span class="number">30</span>;</span><br><span class="line">    position_x = high / <span class="number">2</span>;</span><br><span class="line">    position_y = <span class="built_in">width</span> / <span class="number">2</span>;</span><br><span class="line">    bullet_x = <span class="number">0</span>;</span><br><span class="line">    bullet_y = position_y;</span><br><span class="line">    enemy_x = <span class="number">2</span>;</span><br><span class="line">    enemy_y = position_y - <span class="number">1</span>;</span><br><span class="line">    score = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">startMap</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, j;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= high - <span class="number">1</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">map</span>[i][<span class="number">1</span>] = <span class="number">4</span>;</span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">2</span>; j &lt;= <span class="built_in">width</span> - <span class="number">1</span>; j++)</span><br><span class="line">            <span class="built_in">map</span>[i][j] = <span class="number">0</span>;</span><br><span class="line">        <span class="built_in">map</span>[i][<span class="built_in">width</span>] = <span class="number">4</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//�·�Χǽ�ĳ�ʼ�� </span></span><br><span class="line">    i = high;</span><br><span class="line">    <span class="keyword">for</span> (j = <span class="number">1</span>; j &lt;= <span class="built_in">width</span>; j++)</span><br><span class="line">        <span class="built_in">map</span>[i][j] = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">map</span>[bullet_x][bullet_y] = <span class="number">5</span>;</span><br><span class="line">    <span class="comment">/*������ս����С�ĳ�ʼ����ʼ*/</span></span><br><span class="line">    <span class="built_in">map</span>[position_x - <span class="number">1</span>][position_y] = <span class="number">1</span>;</span><br><span class="line">    i = position_x;</span><br><span class="line">    <span class="keyword">for</span> (j = position_y - <span class="number">2</span>; j &lt;= position_y + <span class="number">2</span>; j++)</span><br><span class="line">        <span class="built_in">map</span>[i][j] = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">map</span>[position_x + <span class="number">1</span>][position_y - <span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">map</span>[position_x + <span class="number">1</span>][position_y + <span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="comment">/***      ��ʼ������         **/</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/* ����ս���ĳ�ʼ�� */</span></span><br><span class="line">    <span class="built_in">map</span>[enemy_x][enemy_y] = <span class="number">2</span>;</span><br><span class="line">    <span class="built_in">map</span>[enemy_x - <span class="number">1</span>][enemy_y - <span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">    <span class="built_in">map</span>[enemy_x - <span class="number">1</span>][enemy_y + <span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">    <span class="comment">/* ����ս����ʼ������*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">HideCursor</span><span class="params">()</span><span class="comment">//���ع�� </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    CONSOLE_CURSOR_INFO cursor_info = &#123; <span class="number">1</span>, <span class="number">0</span> &#125;;</span><br><span class="line">    SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &amp;cursor_info);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">gotoxy</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span><span class="comment">//����һ������Ļ </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);</span><br><span class="line">    COORD pos;</span><br><span class="line">    pos.X = x;</span><br><span class="line">    pos.Y = y;</span><br><span class="line">    SetConsoleCursorPosition(handle, pos);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">updateWithoutInput</span><span class="params">()</span><span class="comment">//�������޹صĸ��� </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (bullet_x &gt; <span class="number">0</span>)</span><br><span class="line">        bullet_x--;</span><br><span class="line">    <span class="keyword">if</span> ((bullet_x == enemy_x) &amp;&amp; (bullet_y == enemy_y))<span class="comment">//�����˵ķɻ�������ʱ </span></span><br><span class="line">    &#123;</span><br><span class="line">        score++;</span><br><span class="line">        enemy_x = <span class="number">0</span>;</span><br><span class="line">        enemy_y = rand() % <span class="built_in">width</span>;</span><br><span class="line">        bullet_x = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (enemy_x &gt; high)<span class="comment">//���ɻ��������� </span></span><br><span class="line">    &#123;</span><br><span class="line">        enemy_x = <span class="number">0</span>;</span><br><span class="line">        enemy_y = rand() % <span class="built_in">width</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (speed == <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10000</span>; i++)<span class="comment">//�������Ƶл����ٶ� </span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= <span class="number">1000</span>; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                speed = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    speed = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (speed == <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        enemy_x++;</span><br><span class="line">        speed = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">updateWithInput</span><span class="params">()</span><span class="comment">//�������йصĸ��� </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> input;</span><br><span class="line">    <span class="keyword">if</span> (kbhit())<span class="comment">//��VC6.0++�£�Ϊ_kbhit()</span></span><br><span class="line">    &#123;</span><br><span class="line">        input = getch();<span class="comment">//��VC6.0++��Ϊ_getch();</span></span><br><span class="line">        <span class="keyword">if</span> (input == <span class="string">'a'</span>)</span><br><span class="line">            position_y-=<span class="number">6</span>;</span><br><span class="line">        <span class="keyword">if</span> (input == <span class="string">'s'</span>)</span><br><span class="line">            position_x+=<span class="number">8</span>;</span><br><span class="line">        <span class="keyword">if</span> (input == <span class="string">'d'</span>)</span><br><span class="line">            position_y+=<span class="number">8</span>;</span><br><span class="line">        <span class="keyword">if</span> (input == <span class="string">'w'</span>)</span><br><span class="line">            position_x-=<span class="number">6</span>;</span><br><span class="line">        <span class="keyword">if</span> (input == <span class="string">'j'</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            bullet_x = position_x - <span class="number">1</span>;</span><br><span class="line">            bullet_y = position_y;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span><span class="comment">//չʾ������ </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    gotoxy(<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">int</span> i, j;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= high; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">1</span>; j &lt;= <span class="built_in">width</span>; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">map</span>[i][j] == <span class="number">0</span>)</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">map</span>[i][j] == <span class="number">1</span>)</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">"*"</span>);</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">map</span>[i][j] == <span class="number">2</span>)</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">"#"</span>);</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">map</span>[i][j] == <span class="number">3</span>)</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">"-"</span>);</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">map</span>[i][j] == <span class="number">4</span>)</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">"|"</span>);</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">map</span>[i][j] == <span class="number">5</span>)</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">"|"</span>);</span><br><span class="line">              </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n��ĵ÷�:%d\n\n"</span>, score);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"�˲���˵����asdw��������j���\n"</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"wujinxi������"</span>); </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    starup();</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        HideCursor();</span><br><span class="line">        startMap();</span><br><span class="line">        show();</span><br><span class="line">        updateWithoutInput();</span><br><span class="line">        updateWithInput();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/28/C++%E9%9B%9C%E8%AB%87/" data-id="ckd6x9t7v0001rwwchyuc2sbs" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cpp/" rel="tag">cpp</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-説明" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/27/%E8%AA%AC%E6%98%8E/" class="article-date">
+  <time datetime="2020-07-27T08:51:26.000Z" itemprop="datePublished">2020-07-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/27/%E8%AA%AC%E6%98%8E/">説明</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>如果在一個blog中設置了密碼，則該密碼一定是[helloworld]</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/27/%E8%AA%AC%E6%98%8E/" data-id="ckd6x9ukm0004rwwcccorfm0q" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E8%A1%93/" rel="tag">技術</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/" rel="tag">cpp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E8%A1%93/" rel="tag">技術</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤雲</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/%E6%8A%80%E8%A1%93/" style="font-size: 10px;">技術</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">彙整</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/28/C++%E9%9B%9C%E8%AB%87/">C++ 雜談</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/27/%E8%AA%AC%E6%98%8E/">説明</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Philosophy<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
