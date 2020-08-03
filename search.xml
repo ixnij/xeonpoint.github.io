@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title>感谢tester：wechat@节能.</title>
-      <link href="/2020/08/03/%E6%84%9F%E8%B0%A2tester%EF%BC%9Awechat-%E8%8A%82%E8%83%BD/"/>
-      <url>/2020/08/03/%E6%84%9F%E8%B0%A2tester%EF%BC%9Awechat-%E8%8A%82%E8%83%BD/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>信息学奥赛题解(持續更新)</title>
       <link href="/2020/08/01/%E4%BF%A1%E6%81%AF%E5%AD%A6%E5%A5%A5%E8%B5%9B%E9%A2%98%E8%A7%A3/"/>
       <url>/2020/08/01/%E4%BF%A1%E6%81%AF%E5%AD%A6%E5%A5%A5%E8%B5%9B%E9%A2%98%E8%A7%A3/</url>
@@ -133,7 +120,7 @@
       <link href="/2020/07/27/%E8%AA%AC%E6%98%8E/"/>
       <url>/2020/07/27/%E8%AA%AC%E6%98%8E/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>如果在一個blog中設置了密碼，則該密碼一定是[helloworld]</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>如果在一個blog中設置了密碼，則該密碼一定是[helloworld]</p><h3 id="踩坑："><a href="#踩坑：" class="headerlink" title="踩坑："></a>踩坑：</h3><p>我现在将网站部署至gitee了。由于某些原因，已经无法在GitHub上部署了。<br>而为何我之前一直无法吧博客部署至gitee?因为仓库名。仓库名不许是自己的名字（gitee用户名)</p>]]></content>
       
       
       
