@@ -120,7 +120,7 @@
       <link href="/2020/07/27/%E8%AA%AC%E6%98%8E/"/>
       <url>/2020/07/27/%E8%AA%AC%E6%98%8E/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>如果在一個blog中設置了密碼，則該密碼一定是[helloworld]</p><h3 id="踩坑："><a href="#踩坑：" class="headerlink" title="踩坑："></a>踩坑：</h3><p>我现在将网站部署至gitee了。由于某些原因，已经无法在GitHub上部署了。<br>而为何我之前一直无法吧博客部署至gitee?因为仓库名。仓库名不许是自己的名字（gitee用户名)</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>如果在一個blog中設置了密碼，則該密碼一定是[helloworld]</p><h3 id="踩坑："><a href="#踩坑：" class="headerlink" title="踩坑："></a>踩坑：</h3><p>我现在将网站部署至gitee了。由于某些原因，已经无法在GitHub上部署了。<br>而为何我之前一直无法吧博客部署至gitee?因为仓库名。仓库名不许是自己的名字（gitee用户名)</p><h3 id="順便説幾句："><a href="#順便説幾句：" class="headerlink" title="順便説幾句："></a>順便説幾句：</h3><p>這個gitee真的有點坑，都提供靜態網站服務了，還不給你自動部署?！coding都有一系列觸發機制，重新部署，非常之詳細，且自定義以及方便程度都大大提高。gitee真是無力吐槽。</p><h3 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h3><p>其實這三家(<code>github</code> <code>gitee</code> <code>coding</code>)都有自己的優缺點</p><p>其中GitHub提供的服務是最完善的，只是可惜由於某些原因無法訪問。gitee也不錯，只是缺點之前講過。coding也還行。</p>]]></content>
       
       
       
